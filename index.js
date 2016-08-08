@@ -1,5 +1,7 @@
 var request = require('request');
 
+
+//GET SESSION ID
 var url = 'http://api.foodessentials.com/createsession?uid=ert&devid=ert&appid=ert&f=json&v=2.00&api_key='+process.env.API_KEY
 request(url, function(error, response, body){
   if(error){console.log("Error ", error)};
@@ -64,18 +66,4 @@ var additive_Name = ''
 
 
 
-//ingredient search
-// var search_term = 'LIQUID SUGAR'
-// var ingredient_url = 'http://api.foodessentials.com/ingredientsearch?q='+ search_term +'&sid='+session+'&n=10&s=0&f=json&api_key='+process.env.API_KEY
-//     request(ingredient_url, function(err, res, bod){
-//       if(err){console.log("Error", err)}
-//         if(!err && res.statusCode ===200){
-//           var b = JSON.parse(bod);
-//           var ingredient_id = b.arrayIngredients[0].ingredient_id;
-//           console.log(ingredient_id)
-//           var ingredient_name = b.arrayIngredients[0].ingredient_name;
-//           console.log(ingredient_name);
-//         }
-//         //
-//     })
 
